@@ -1582,8 +1582,10 @@ run(void)
 
 void
 runAutostart(void) {
-	//system("cd ~/.dwm; ./autostart_blocking.sh");
-	system("cd ~/.dwm; ./autostart.sh &");
+	//system("cd ~/.dwm; ./execpicom.sh &");
+	//system("cd ~/.dwm; ./execfcitx.sh &");
+	system("picom &");
+	system("fcitx &");
 }
 
 void
