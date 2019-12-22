@@ -1582,11 +1582,7 @@ run(void)
 
 void
 runAutostart(void) {
-	//system("cd ~/.dwm; ./execpicom.sh &");
-	//system("cd ~/.dwm; ./execfcitx.sh &");
-	system("picom &");
-	system("fcitx &");
-	system("wmname LG3D &");
+	system("cd ~/workspace/script/dwmstart; ./autostart.sh &");
 }
 
 void

@@ -82,6 +82,10 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34
 
 static const char *browsercmd[]  = { "chromium", NULL };
 
+static const char *voicetog[]  = { "amixer", "set" ,"Master","toggle"};
+static const char *voiceplus[]  = { "amixer", "set" ,"Master" ,"5%+"};
+static const char *voiceminu[]  = { "amixer", "set" ,"Master" ,"5%-"};
+
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -113,6 +117,13 @@ static Key keys[] = {
 	{ MODKEY|Mod4Mask,              XK_o,      incrohgaps,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_y,      incrovgaps,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_o,      incrovgaps,     {.i = -1 } },
+
+	{ MODKEY,                       XK_F18,      spawn,          {.v = voicetog } },
+	{ MODKEY,                       XK_F19,      spawn,          {.v = voiceminu }},
+	{ MODKEY,                       XK_F20,      spawn,          {.v = voiceplus } },
+	{ MODKEY,                       XK_F9,       spawn,          {.v = voicetog } },
+	{ MODKEY,                       XK_F10,      spawn,          {.v = voiceminu }},
+	{ MODKEY,                       XK_F11,      spawn,          {.v = voiceplus } },
 
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
