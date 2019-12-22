@@ -1586,6 +1586,7 @@ runAutostart(void) {
 	//system("cd ~/.dwm; ./execfcitx.sh &");
 	system("picom &");
 	system("fcitx &");
+	system("wmname LG3D &");
 }
 
 void
